@@ -19,7 +19,7 @@ body{
 	padding: 2%;
 }
 
-#elementos.elemento{
+#elementos .elemento{
 	margin: 10px;
 	border: 2px solid #c0c5ce;
 	display: block;
