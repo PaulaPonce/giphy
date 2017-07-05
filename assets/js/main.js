@@ -7,12 +7,12 @@ $(document).ready(function(){
 			url = element.bitly_gif_url;
 			$("#elementos").append(armarTemplate(gif, url));
 		});
-	};
+	}
 
 	var armarTemplate = function(gif, url){
-		var t = "<div class='elemento'><img src='" + gif + "'/>< href='" + url + "'>Ver más</a></div>";
+		var t = "<div class='elemento'><img src='" + gif + "'/><a href='" + url + "'>Ver más</a></div>";
 		return t;
-	};
+	}
 
 	var ajaxGif = function(gif){
 		$.ajax({
@@ -23,15 +23,15 @@ $(document).ready(function(){
 				q: gif,
 				api_key: 'dc6zaTOxFJmzC'
 			}
-		});
+		})
 		.done(function(response){
 			console.log(response);
 			dibujarGifs(response.data);
-		});
+		})
 		.fail(function(){
 			console.log("error");
 		});
-	};
+	}
 
 	$("#buscar-gif").click(function(event){
 		console.log("Entro");
